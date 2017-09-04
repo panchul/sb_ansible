@@ -19,3 +19,22 @@ This is how it works:
     gen1 | SUCCESS | rc=0 >>
     gen1
 
+    And now with a playbook:
+    
+    PLAY [gen1] ********************************************************************
+    
+    TASK [Check the date.] *********************************************************
+    changed: [gen1]
+    
+    TASK [Print the date.] *********************************************************
+    ok: [gen1] => {
+        "date.stdout": "Mon Sep  4 04:44:45 UTC 2017"
+    }
+    
+    TASK [do the hostname thing] ***************************************************
+    changed: [gen1]
+    
+    PLAY RECAP *********************************************************************
+    gen1                       : ok=3    changed=2    unreachable=0    failed=0   
+    
+    
