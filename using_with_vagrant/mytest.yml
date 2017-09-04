@@ -1,0 +1,16 @@
+---
+- hosts:  cpp1
+  gather_facts: no
+
+  tasks:
+  - name: Check the date.
+    command: date
+    register: date
+
+  - name: Print the date.
+    debug: var=date.stdout
+
+  - name: do the hostname thing
+    shell: hostname ; echo something
+
+
